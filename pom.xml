@@ -88,6 +88,6 @@
 			</plugins>
 		</pluginManagement>
 
-		<finalName>Spring4MVCHelloWorldRestServiceDemo</finalName>
+		<finalName>PDFUpload</finalName>
 	</build>
 </project>

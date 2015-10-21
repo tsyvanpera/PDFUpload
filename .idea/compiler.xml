@@ -22,10 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="PDFUpload" />
         <module name="Spring4MVCHelloWorldRestServiceDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="PDFUpload" target="1.5" />
       <module name="Spring4MVCHelloWorldRestServiceDemo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
