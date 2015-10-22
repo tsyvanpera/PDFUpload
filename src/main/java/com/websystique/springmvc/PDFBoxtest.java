@@ -7,9 +7,8 @@ import java.io.IOException;
  */
 public class PDFBoxtest {
     public static void main(String [] args) throws IOException {
-        PDFManager pdfManager = new PDFManager();
-        pdfManager.setFilePath("C:\\Users\\syto\\Downloads\\of_49_25-44.pdf");
-        String pdfText = pdfManager.ToText();
+        PDFService pdfService = new PDFService("C:\\Users\\syto\\Downloads\\of_49_25-44.pdf");
+        String pdfText = pdfService.getText();
         System.out.println(pdfText);
     }
 }
