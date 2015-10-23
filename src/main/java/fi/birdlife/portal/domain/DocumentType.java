@@ -3,7 +3,6 @@ package fi.birdlife.portal.domain;
 /**
  * Created by tommisyvanpera on 23/10/15.
  */
-public class Publisher {
-    public int id;
-    public String name;
+public enum DocumentType {
+    PICTURE, TEXT;
 }

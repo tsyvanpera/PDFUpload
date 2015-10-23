@@ -1,11 +1,14 @@
 package fi.birdlife.portal.controller;
 
+import fi.birdlife.portal.domain.Publication;
+import fi.birdlife.portal.domain.Publisher;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
+import java.io.File;
 
 @RestController
 public class PDFController {
@@ -27,4 +30,9 @@ public class PDFController {
         entityManager.close();
         */
     }
+
+    public void addPublication(Publisher publisher, Publication publication) {
+
+    }
+
 }
