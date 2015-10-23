@@ -20,6 +20,6 @@ public class PDFBoxtest {
         PDFService pdfService = new PDFService(pdfFile);
         String pdfText = pdfService.getText();
 
-        controller.addPublication(new Publisher(1, "Birdlife Suomi"),new Publication("Tringa",2015,3,130, DocumentType.TEXT, DocumentVisibility.FREE,new URL("file://"+pdfFile),pdfText, Locale.ENGLISH));
+        controller.addPublication(new Publisher("Birdlife Suomi"),new Publication("Tringa",2015,3,130, DocumentType.TEXT, DocumentVisibility.FREE,new URL("file://"+pdfFile),pdfText, Locale.ENGLISH));
     }
 }
