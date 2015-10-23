@@ -2,6 +2,7 @@ package fi.birdlife.portal.controller;
 
 import fi.birdlife.portal.domain.Publication;
 import fi.birdlife.portal.domain.Publisher;
+import javassist.NotFoundException;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,8 +33,15 @@ public class PDFController {
         */
     }
 
-    public void addPublication(Publisher publisher, Publication publication) {
+    public void addPublication(int publisherId, Publication publication) throws NotFoundException {
         entityManager = Persistence.createEntityManagerFactory("portaali").createEntityManager();
+
+        Publisher publisher = entityManager.find(Publisher.class, publisherId);
+        if (publisher == null) {
+            throw new NotFoundException("Publisher with id: "+publisherId+" not found");
+        }
+
+        publisher.getPublications().add(publication);
 
         entityManager.getTransaction().begin();
         entityManager.persist(publisher);

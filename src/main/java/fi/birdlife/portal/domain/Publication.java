@@ -12,7 +12,9 @@ public class Publication {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-   // public Publisher publisher;
+    @ManyToOne(fetch=FetchType.LAZY)
+    //@JoinColumn(name="publisher")
+    public Publisher publisher;
 
     public String name;
     public int year;
@@ -23,6 +25,8 @@ public class Publication {
     public URL PDFUrl;
     public String content;
     public Locale documentLanguage;
+
+    public Publication() {}
 
     public Publication(String name, int year, int volume, int pages, DocumentType documentType, DocumentVisibility documentVisibility, URL pdfUrl, String content, Locale documentLanguage) {
         this.name = name;

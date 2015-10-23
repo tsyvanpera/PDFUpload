@@ -1,6 +1,7 @@
 package fi.birdlife.portal.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="publisher")
@@ -13,6 +14,11 @@ public class Publisher {
 
     @Column
     public String name;
+
+    @OneToMany(mappedBy="publisher")
+    public List<Publication> publications;
+
+    public Publisher() {}
 
     public Publisher(String name) {
         this.id = id;
@@ -34,4 +40,13 @@ public class Publisher {
     public void setName(String name) {
         this.name = name;
     }
+
+    public List<Publication> getPublications() {
+        return publications;
+    }
+
+    public void setPublications(List<Publication> publications) {
+        this.publications = publications;
+    }
+
 }
