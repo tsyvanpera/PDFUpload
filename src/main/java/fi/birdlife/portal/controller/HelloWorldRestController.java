@@ -1,10 +1,8 @@
-package fi.birdlife.portaali.controller;
+package fi.birdlife.portal.controller;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import fi.birdlife.portaali.domain.Message;
 
 @RestController
 public class HelloWorldRestController {

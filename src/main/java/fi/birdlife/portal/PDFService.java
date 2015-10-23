@@ -1,4 +1,4 @@
-package fi.birdlife.portaali;
+package fi.birdlife.portal;
 
 /**
  * Created by syto on 21.10.2015.

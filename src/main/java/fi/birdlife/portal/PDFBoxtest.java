@@ -1,4 +1,4 @@
-package fi.birdlife.portaali;
+package fi.birdlife.portal;
 
 import java.io.IOException;
 
