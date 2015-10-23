@@ -1,4 +1,4 @@
-package com.websystique.springmvc.configuration;
+package fi.birdlife.portaali.configuration;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;

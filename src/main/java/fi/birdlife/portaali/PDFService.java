@@ -1,4 +1,4 @@
-package com.websystique.springmvc;
+package fi.birdlife.portaali;
 
 /**
  * Created by syto on 21.10.2015.

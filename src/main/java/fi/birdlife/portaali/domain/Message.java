@@ -1,4 +1,4 @@
-package com.websystique.springmvc.domain;
+package fi.birdlife.portaali.domain;
 
 public class Message {
 

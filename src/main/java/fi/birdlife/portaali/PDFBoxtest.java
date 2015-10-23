@@ -1,4 +1,4 @@
-package com.websystique.springmvc;
+package fi.birdlife.portaali;
 
 import java.io.IOException;
 
