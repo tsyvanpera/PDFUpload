@@ -49,4 +49,8 @@ public class Publisher {
         this.publications = publications;
     }
 
+    public void addPublication(Publication publication) {
+        this.publications.add(publication);
+        publication.setPublisher(this);
+    }
 }

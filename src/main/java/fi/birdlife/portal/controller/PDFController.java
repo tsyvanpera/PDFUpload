@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import java.io.File;
+import java.util.List;
 
 @RestController
 public class PDFController {
@@ -41,7 +42,7 @@ public class PDFController {
             throw new NotFoundException("Publisher with id: "+publisherId+" not found");
         }
 
-        publisher.getPublications().add(publication);
+        publisher.addPublication(publication);
 
         entityManager.getTransaction().begin();
         entityManager.persist(publisher);
