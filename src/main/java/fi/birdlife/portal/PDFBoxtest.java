@@ -1,10 +1,7 @@
 package fi.birdlife.portal;
 
 import fi.birdlife.portal.controller.PDFController;
-import fi.birdlife.portal.domain.DocumentType;
-import fi.birdlife.portal.domain.DocumentVisibility;
-import fi.birdlife.portal.domain.Publication;
-import fi.birdlife.portal.domain.Publisher;
+import fi.birdlife.portal.domain.*;
 import javassist.NotFoundException;
 
 import java.io.IOException;
@@ -21,6 +18,6 @@ public class PDFBoxtest {
         PDFService pdfService = new PDFService(pdfFile);
         String pdfText = pdfService.getText();
 
-        controller.addPublication(1,new Publication("Tringa",2015,3,130, DocumentType.TEXT, DocumentVisibility.FREE,new URL("file://"+pdfFile),pdfText, Locale.ENGLISH));
+        controller.addPublication(1,new Publication("Tringa",2015,3,130, DocumentType.TEXT, DocumentVisibility.FREE,new URL("file://"+pdfFile),pdfText, DocumentLanguage.ENGLISH));
     }
 }

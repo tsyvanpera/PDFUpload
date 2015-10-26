@@ -20,32 +20,32 @@ public class Publication {
     public int year;
     public int volume;
     public int pages;
-    public DocumentType documentType;
-    public DocumentVisibility documentVisibility;
+    public DocumentType type;
+    public DocumentVisibility visibility;
     public URL PDFUrl;
     public String content;
-    public Locale documentLanguage;
+    public DocumentLanguage language;
 
     public Publication() {}
 
-    public Publication(String name, int year, int volume, int pages, DocumentType documentType, DocumentVisibility documentVisibility, URL pdfUrl, String content, Locale documentLanguage) {
+    public Publication(String name, int year, int volume, int pages, DocumentType type, DocumentVisibility visibility, URL pdfUrl, String content, DocumentLanguage language) {
         this.name = name;
         this.year = year;
         this.volume = volume;
         this.pages = pages;
-        this.documentType = documentType;
-        this.documentVisibility = documentVisibility;
+        this.type = type;
+        this.visibility = visibility;
         PDFUrl = pdfUrl;
         this.content = content;
-        this.documentLanguage = documentLanguage;
+        this.language = language;
     }
 
-    public Locale getDocumentLanguage() {
-        return documentLanguage;
+    public DocumentLanguage getDocumentLanguage() {
+        return language;
     }
 
-    public void setDocumentLanguage(Locale documentLanguage) {
-        this.documentLanguage = documentLanguage;
+    public void setDocumentLanguage(DocumentLanguage language) {
+        this.language = language;
     }
 /*
     public Publisher getPublisher() {
@@ -89,19 +89,19 @@ public class Publication {
     }
 
     public DocumentType getDocumentType() {
-        return documentType;
+        return type;
     }
 
-    public void setDocumentType(DocumentType documentType) {
-        this.documentType = documentType;
+    public void setDocumentType(DocumentType type) {
+        this.type = type;
     }
 
     public DocumentVisibility getDocumentVisibility() {
-        return documentVisibility;
+        return visibility;
     }
 
-    public void setDocumentVisibility(DocumentVisibility documentVisibility) {
-        this.documentVisibility = documentVisibility;
+    public void setDocumentVisibility(DocumentVisibility visibility) {
+        this.visibility = visibility;
     }
 
     public URL getPDFUrl() {
