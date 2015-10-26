@@ -46,6 +46,7 @@ public class PDFController {
 
         entityManager.getTransaction().begin();
         entityManager.persist(publisher);
+        entityManager.persist(publication);
         entityManager.getTransaction().commit();
         entityManager.close();
     }
